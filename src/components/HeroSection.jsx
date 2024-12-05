@@ -2,6 +2,9 @@ import React from "react";
 import "./HeroSection.css";
 import '../App.css';
 import ImageCarousel from "./ImageCarousel";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 const HeroSection = () => {
   return (
@@ -18,14 +21,22 @@ const HeroSection = () => {
   Optimize your lifestyle and reverse chronic diseases
 </div>
 
-         <div className="search-bar-outer">
-        <div className="search-bar-inner">
-          <input type="text" placeholder="Procedure" className="procedure-box" />
-          <input type="text" placeholder="City/State" className="city-state-box" />
-          <input type="text" placeholder="Last Box" className="last-box" />
-          <button className="find-button">Find</button>
-        </div>
-      </div>
+<div className="search-bar-container">
+  <div className="search-box">
+    <input type="text" placeholder="Condition, procedure, specialty..." />
+  </div>
+  <div className="search-box">
+    <input type="text" placeholder="City, state, or zipcode" />
+  </div>
+  <div className="search-box">
+    <input type="text" placeholder="Insurance carrier" />
+  </div>
+  <button className="find-now-button">
+    <span role="img" aria-label="search"><FontAwesomeIcon icon={faSearch} />
+    </span> Find now
+  </button>
+</div>
+
       </div>
     </section>
   );

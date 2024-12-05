@@ -35,43 +35,74 @@
     margin-bottom: 30px;
   }
   
-  .search-bar {
+  .search-bar-container {
+    width: 1080px;
+    height: 92px;
+    margin: 0 auto; /* Centers the container */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .search-bar input {
-    padding: 15px;
-    width: 280px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .search-bar input:focus {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    outline: none;
-  }
-  
-  .search-bar button {
-    padding: 15px 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    background: #007bff;
-    color: #fff;
+    align-items: center; /* Vertical alignment of children */
+    justify-content: space-between; /* Distributes space between children */
+    background-color: #fff; /* White background */
+    border: 1px solid #e7e7e7; /* Light gray border */
+    border-radius: 8px; /* Smooth rounded corners */
+    padding: 16px; /* Add spacing around content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    gap: 16px; /* Spacing between child elements */
+    margin-top: 100px;
+}
+
+.search-box {
+    flex: 1; /* Allows the input box to stretch */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    padding: 0 16px; /* Space inside the input box */
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-box input {
+  height: 60px;
+    width: 100%; /* Takes the full width of the parent */
     border: none;
-    border-radius: 8px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-box-icon {
+    font-size: 20px; /* Ensure the icon is well-aligned with the text */
+    color: #999; /* Icon color */
+    margin-right: 8px;
+}
+
+.find-now-button {
+    width: 160px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #67b1b4, #4683d0);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .search-bar button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-  }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.find-now-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
   .book-appointment-text {
     position: absolute;
     width: 599px;
@@ -131,5 +162,9 @@
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+  }
+  .search-icon {
+    margin-right: 8px;
+    font-size: 16px;
   }
   
