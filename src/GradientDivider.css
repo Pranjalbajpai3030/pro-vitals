@@ -1,0 +1,10 @@
+/* Thin Gradient Divider Styling */
+.gradient-divider {
+  width: 100%; /* Full width */
+  height: 35px; /* Thin line */
+  background: linear-gradient(282.8deg, #E5688C 11.7%, #F0C971 63.17% ); /* Gradient line */
+  margin-top: 40px; /* Space between the upper section and the divider */
+  margin-bottom: 40px; /* Space between the divider and the next section */
+  opacity: 1; /* Fully visible */
+  transform: rotate(178.73deg);
+}

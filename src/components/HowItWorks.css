@@ -1,0 +1,48 @@
+/* How It Works Section */
+.how-it-works-section {
+  width: 100%;
+  padding: 40px;
+  background-color: #ffffff;
+  text-align: left;
+  margin-top: 50px;
+  position: relative;
+}
+
+.how-it-works-title {
+  width: 135px;
+  height: 21px;
+  position: absolute;
+  top: 802px;
+  left: 80px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.28px;
+  letter-spacing: 0.075em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin: 0;
+}
+
+.lifestyle-title {
+  width: 481px;
+  height: 37px;
+  position: absolute;
+  top: 833px;
+  left: 80px;
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 37.24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin: 0;
+}
+
+.lifestyle-title span.six-pillars {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
