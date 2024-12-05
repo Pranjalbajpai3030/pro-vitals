@@ -1,48 +1,103 @@
-/* How It Works Section */
-.how-it-works-section {
+.how-it-works {
   width: 100%;
   padding: 40px;
   background-color: #ffffff;
   text-align: left;
   margin-top: 50px;
-  position: relative;
 }
 
-.how-it-works-title {
-  width: 135px;
-  height: 21px;
-  position: absolute;
-  top: 802px;
-  left: 80px;
-  font-family: 'Inter', sans-serif;
+.how-it-works h2 {
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 21.28px;
   letter-spacing: 0.075em;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .lifestyle-title {
-  width: 481px;
-  height: 37px;
-  position: absolute;
-  top: 833px;
-  left: 80px;
-  font-family: 'Inter', sans-serif;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 600;
-  line-height: 37.24px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin: 0;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.lifestyle-title span.six-pillars {
-  font-family: 'Inter', sans-serif;
+.gradient-text {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.six-pillars {
+  font-weight: bold;
+}
+
+.how-it-works-card {
+  flex: 0 0 300px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   font-weight: 400;
+  color: #666;
+}
+
+/* Styles specific to ItemsSlider */
+.item-slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-slider {
+  display: flex;
+  align-items: center;
+}
+
+.item-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 0 50px;
+}
+
+.left-arrow-left,
+.right-arrow-right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+  z-index: 2;
+}
+
+.left-arrow-left {
+  left: 0;
+}
+
+.right-arrow-right {
+  right: 0;
+}
+
+.is-disabled-hide {
+  visibility: hidden;
 }

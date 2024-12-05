@@ -1,0 +1,47 @@
+
+
+.item-slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .item-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .item-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .item-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+  }
+  
+  .left-arrow,
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .left-arrow {
+    left: 0;
+  }
+  
+  .right-arrow {
+    right: 0;
+  }
+  
+  .is-disabled-hide {
+    display: none; /* Hides disabled arrows */
+  }
+  
