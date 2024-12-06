@@ -9,13 +9,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const HeroSection = () => {
   return (
     <section className="hero-section">
-         {/* Background collage */}
-         <div className="background-collage">
-        <img src="image1.jfif" alt="Cooking" className="collage-image" />
-        <img src="image2.jfif" alt="Yoga" className="collage-image" />
-        <img src="image3.jfif" alt="Kitchen" className="collage-image" />
-        <img src="image4.jfif" alt="Beach" className="collage-image" />
-      </div>
+      
       <ImageCarousel />
       <div className="hero-content">
       <div className="book-appointment-text">

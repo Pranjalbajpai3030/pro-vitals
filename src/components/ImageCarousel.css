@@ -1,30 +1,58 @@
-.carousel {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-    width: 100%;
+.hero-section {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.image-strip-up, .image-strip-down {
+  width: 247px; /* Fixed width for the strip */
+  height: 100%; /* Full height of the section */
+  overflow: hidden;
+  position: absolute;
+}
+
+.image-strip-up {
+  left: 0;
+  animation: rollUp 10s linear infinite;
+}
+
+.image-strip-down {
+  right: 0;
+  animation: rollDown 10s linear infinite;
+}
+
+.collage-image {
+  width: 247px;  /* Fixed width */
+  height: 355px; /* Fixed height */
+  object-fit: cover;
+  margin-bottom: 20px; /* Space between images */
+}
+
+/* Keyframes for rolling up animation */
+@keyframes rollUp {
+  0% {
+    transform: translateY(0);
   }
-  
-  .carousel img {
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
+  100% {
+    transform: translateY(-100%);
   }
-  
-  .carousel img.active {
-    opacity: 1;
-    transform: scale(1.05);
+}
+
+/* Keyframes for rolling down animation */
+@keyframes rollDown {
+  0% {
+    transform: translateY(0);
   }
-  
-  .carousel::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  100% {
+    transform: translateY(100%);
   }
-  
+}

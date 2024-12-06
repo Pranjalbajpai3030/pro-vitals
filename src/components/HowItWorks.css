@@ -18,6 +18,8 @@
 .lifestyle-title {
   font-size: 18px;
   margin-bottom: 20px;
+  font-style: italic;
+  font-weight: ;
 }
 
 .gradient-text {
@@ -30,15 +32,7 @@
   font-weight: bold;
 }
 
-.how-it-works-card {
-  flex: 0 0 300px;
-  padding: 16px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin: 0 10px;
-}
+
 
 .card-image {
   width: 100%;
@@ -80,24 +74,67 @@
   padding: 0 50px;
 }
 
+
+
+
+
+.is-disabled-hide {
+  visibility: hidden;
+}
+/* Adjust arrow positioning and visibility */
+.item-slider-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.item-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 0 40px;
+}
+
 .left-arrow-left,
 .right-arrow-right {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 10px; /* Place arrows at the top */
   transform: translateY(-50%);
   color: #333;
+  font-size: 24px; /* Increase for visibility */
+  background-color: #fff; /* Optional background for arrows */
+  border: none;
   z-index: 2;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .left-arrow-left {
-  left: 0;
+  left: 10px;
 }
 
 .right-arrow-right {
-  right: 0;
+  right: 10px;
 }
 
 .is-disabled-hide {
-  visibility: hidden;
+  visibility: hidden; /* Hide arrow if scrolling is not possible */
+}
+
+.how-it-works-card {
+  flex: 0 0 280px; /* Adjust card size for slider */
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.how-it-works-card:hover {
+  transform: scale(1.05); /* Add hover effect for cards */
 }

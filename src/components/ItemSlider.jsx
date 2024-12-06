@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react';
-import './ItemSlider.css';
+import React, { useState, useRef } from "react";
+import "./ItemSlider.css";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
-import { Container } from 'react-bootstrap';
+import { Container } from "react-bootstrap";
 
 const ItemsSlider = ({ title, children }) => {
   const scrl = useRef(null);
@@ -11,7 +11,7 @@ const ItemsSlider = ({ title, children }) => {
   const slide = (shift) => {
     scrl.current.scrollBy({
       left: shift,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
 
     setScrollX(scrollX + shift);
@@ -46,24 +46,20 @@ const ItemsSlider = ({ title, children }) => {
       <div className="item-slider">
         {/* Left Arrow */}
         <div
-          className={`left-arrow ${(scrollX < 1) ? 'is-disabled-hide' : ''}`}
+          className={`left-arrow ${scrollX < 1 ? "is-disabled-hide" : ""}`}
           onClick={() => slide(-300)} // Adjust shift value as needed
         >
           <MdArrowBackIos size="30px" />
         </div>
 
         {/* Item Container */}
-        <div
-          ref={scrl}
-          onScroll={scrollCheck}
-          className="item-container"
-        >
+        <div ref={scrl} onScroll={scrollCheck} className="item-container">
           {children}
         </div>
 
         {/* Right Arrow */}
         <div
-          className={`right-arrow ${!scrollEnd ? '' : 'is-disabled-hide'}`}
+          className={`right-arrow ${!scrollEnd ? "" : "is-disabled-hide"}`}
           onClick={() => slide(300)} // Adjust shift value as needed
         >
           <MdArrowForwardIos size="30px" />
