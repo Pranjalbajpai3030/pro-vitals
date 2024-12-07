@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./HowItWorks.css";
 import nutritionImg from "../assets/images/nutrition.jpg";
 import physicalImg from "../assets/images/physical.jpg";
@@ -9,6 +9,7 @@ import substanceImg from "../assets/images/substance.jpg";
 
 const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState("Nutrition");
+  const sliderRef = useRef(null);
 
   const topics = [
     {
@@ -37,23 +38,35 @@ const HowItWorks = () => {
       image: stressImg,
       description:
         "Effective stress management techniques are crucial for mental well-being and overall health.",
+        metric: "60 bpm",
     },
     {
       title: "Social Connection",
       image: socialImg,
       description:
         "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",
+        metric: "Feeling Better",
     },
     {
       title: "Substance Abuse",
       image: substanceImg,
       description:
         "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
+        metric: "62 Days",
     },
   ];
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+
+  const handleScroll = (direction) => {
+    const slider = sliderRef.current;
+    if (direction === "left") {
+      slider.scrollBy({ left: -300, behavior: "smooth" });
+    } else {
+      slider.scrollBy({ left: 300, behavior: "smooth" });
+    }
   };
 
   return (
@@ -78,21 +91,26 @@ const HowItWorks = () => {
       </div>
 
       {/* Horizontal Sliding Cards */}
-      <div className="slider-container">
-  <div className="card-slider">
-    {topics.map((topic, index) => (
-      <div key={index} className="how-it-works-card">
-        <div className="image-container">
-          <img src={topic.image} alt={topic.title} className="card-image" />
-          <div className="card-metric">{topic.metric}</div>
+      <div className="wrapper">
+        <i className="left-arrow-left" onClick={() => handleScroll("left")}>
+          &#8249;
+        </i>
+        <div className="carousel" ref={sliderRef}>
+          {topics.map((topic, index) => (
+            <div key={index} className="how-it-works-card card">
+              <div className="image-container">
+                <img src={topic.image} alt={topic.title} className="card-image" />
+                {topic.metric && <div className="card-metric">{topic.metric}</div>}
+              </div>
+              <h3 className="card-title">{topic.title}</h3>
+              <p className="card-description">{topic.description}</p>
+            </div>
+          ))}
         </div>
-        <h3 className="card-title">{topic.title}</h3>
-        <p className="card-description">{topic.description}</p>
+        <i className="right-arrow-right" onClick={() => handleScroll("right")}>
+          &#8250;
+        </i>
       </div>
-    ))}
-  </div>
-</div>
-
     </div>
   );
 };
