@@ -9,21 +9,20 @@ import image7 from '../assets/images/image7.jpg';
 import image8 from '../assets/images/image8.jpg';
 
 const ImageCarousel = () => {
-  // Images for carousel
-  const images = [image1, image2, image3, image4, image5, image6, image7, image8];
+  const leftImages = [image1, image2, image3, image4]; // Images for the left strip
+  const rightImages = [image5, image6, image7, image8]; // Images for the right strip
 
   return (
     <div className="image-carousel">
-      {/* Left Strip (images roll up) */}
-      <div className="image-strip-up">
-        {images.map((image, index) => (
-          <img key={index} src={image} alt={`Image ${index + 1}`} className="collage-image" />
+      {/* Left Strip */}
+      <div className="image-strip image-strip-up">
+        {leftImages.map((image, index) => (
+          <img key={index} src={image} alt={`Image ${index ++}`} className="collage-image" />
         ))}
       </div>
-
-      {/* Right Strip (images roll down) */}
-      <div className="image-strip-down">
-        {images.map((image, index) => (
+      {/* Right Strip */}
+      <div className="image-strip image-strip-down">
+        {rightImages.map((image, index) => (
           <img key={index} src={image} alt={`Image ${index + 1}`} className="collage-image" />
         ))}
       </div>

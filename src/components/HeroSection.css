@@ -1,194 +1,187 @@
-@import url(https://db.onlinewebfonts.com/c/ca1609f2e6cc3d28f4332936c5a72667?family=CCDashToSchool+W00+Bold);
-  .hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    background: linear-gradient(to bottom, #f5f5f5, #fff);
-    position: relative;
-  }
-  
-  .hero-content {
-    max-width: 900px;
-    text-align: center;
-    margin-top: -60px;
-    z-index: 1;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2b2b2b;
-    margin-bottom:  20px;
-    line-height: 1.4;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .hero-content h1:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  .search-bar-container {
-    width: 1080px;
-    height: 92px;
-    margin: 0 auto; /* Centers the container */
-    display: flex;
-    align-items: center; /* Vertical alignment of children */
-    justify-content: space-between; /* Distributes space between children */
-    background-color: #fff; /* White background */
-    border: 1px solid #e7e7e7; /* Light gray border */
-    border-radius: 8px; /* Smooth rounded corners */
-    padding: 16px; /* Add spacing around content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
-    gap: 16px; /* Spacing between child elements */
-    margin-top: 100px;
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to bottom, #f5f5f5, #fff);
+  padding-top: 60px;
+  overflow: hidden;
 }
 
+.hero-content {
+  position: left ;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 80px;
+}
+
+.book-appointment-text {
+  position: absolute;
+  width: 599px;
+  height: 104px;
+  top: 214px;
+  left: 650px;
+  font-family: 'Dash to School', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48.41px; /* Matches the line-height of 48.41px */
+  letter-spacing: -0.02em; /* Converts -2% letter spacing to CSS */
+  color: #000; /* Adjust the color as needed */
+  text-align: left; /* Aligns the text to the left */
+}
+
+.optimize-text {
+  position: absolute;
+  width: 630px;
+  height: 32px;
+  top: 342px;
+  left: 650px;
+  font-family: 'Dash to School', sans-serif;
+  font-weight: 400; /* Normal font weight */
+  font-size: 18px;
+  line-height: 32px; /* Matches the given line height */
+  color: #000; /* Replace #000 with the actual color hex if needed */
+  letter-spacing: 0; /* Default spacing */
+  text-align: left; /* Aligns text to the left */
+}
+.span-whitespace {
+  font-family: 'Dash to School', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48.41px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.lifestyle-medicine-text {
+  font-family:'Dash to School', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52.61px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #0daeb3;
+}
+.span-experts {
+  font-family: 'Dash to School', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52.61px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.search-bar-container {
+  position: absolute;
+  top: 464px; /* Shifted 464px from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1080px;
+}
+
+
 .search-box {
-    flex: 1; /* Allows the input box to stretch */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    background-color: #fff;
-    border: 1px solid #e7e7e7;
-    border-radius: 5px;
-    padding: 0 16px; /* Space inside the input box */
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    color: #333;
+  flex: 1;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 16px;
 }
 
 .search-box input {
-  height: 60px;
-    width: 100%; /* Takes the full width of the parent */
-    border: none;
-    outline: none;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    color: #333;
-}
-
-.search-box-icon {
-    font-size: 20px; /* Ensure the icon is well-aligned with the text */
-    color: #999; /* Icon color */
-    margin-right: 8px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
 }
 
 .find-now-button {
-    width: 160px;
-    height: 60px;
-    border: none;
-    border-radius: 5px;
-    background: linear-gradient(to right, #67b1b4, #4683d0);
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #67b1b4, #4683d0);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .find-now-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-  .book-appointment-text {
-    position: absolute;
-    width: 599px;
-    height: 104px;
-    top: 214px;
-    left: 650px;
-    font-family: 'Dash to School', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 48.41px; /* Matches the line-height of 48.41px */
-    letter-spacing: -0.02em; /* Converts -2% letter spacing to CSS */
-    color: #000; /* Adjust the color as needed */
-    text-align: left; /* Aligns the text to the left */
-  }
-  
-  .optimize-text {
-    position: absolute;
-    width: 630px;
-    height: 32px;
-    top: 342px;
-    left: 650px;
-    font-family: 'Dash to School', sans-serif;
-    font-weight: 400; /* Normal font weight */
-    font-size: 18px;
-    line-height: 32px; /* Matches the given line height */
-    color: #000; /* Replace #000 with the actual color hex if needed */
-    letter-spacing: 0; /* Default spacing */
-    text-align: left; /* Aligns text to the left */
-  }
-  .span-whitespace {
-    font-family: 'Dash to School', sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 48.41px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-  .lifestyle-medicine-text {
-    font-family:'Dash to School', sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 52.61px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #0daeb3;
-  }
-  .span-experts {
-    font-family: 'Dash to School', sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 52.61px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-  .search-icon {
-    margin-right: 8px;
-    font-size: 16px;
-  }
+.image-carousel {
+  position: absolute;
+  top: 80px; /* Below navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px); /* Full height minus navbar */
+  display: flex;
+  overflow: hidden;
+  z-index: 1; /* Behind content */
+}
 
-  .background-collage {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1200px;
-    display: grid;
-    grid-template-areas:
-      "image1 image2"
-      "image3 image4";
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 16px;
-    z-index: -1; /* Ensures it is behind the content */
-    padding: 40px;
+.image-strip {
+  position: absolute;
+  width: 247px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-strip-up {
+  left: 80px;
+  animation: rollUp 10s linear infinite;
+}
+
+.image-strip-down {
+  left: 347px;
+  animation: rollDown 10s linear infinite;
+}
+
+.collage-image {
+  width: 247px;
+  height: 354px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+@keyframes rollUp {
+  0% {
+    transform: translateY(100%);
   }
-  
-  .collage-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+  100% {
+    transform: translateY(-100%);
   }
+}
+
+@keyframes rollDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
