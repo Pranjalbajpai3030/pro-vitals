@@ -21,25 +21,37 @@ const HeroSection = () => {
         <div className="optimize-text">
           Optimize your lifestyle and reverse chronic diseases
         </div>
-        
+
         {/* Search Bar Section */}
         <div className="search-bar-container">
           {/* First Input Field - Condition, Procedure, Specialty */}
           <div className="search-box search-box-1">
-          <img src={i1} alt="Condition Logo" className="input-icon" />
-            <input type="text" placeholder="Condition, procedure, specialty..." />
+            <input
+              type="text"
+              className="search-input-condition"
+              data-icon={i1}
+              placeholder="Condition, procedure, specialty..."
+            />
           </div>
 
           {/* Second Input Field - City, State, Zipcode */}
           <div className="search-box search-box-2">
-          <img src={i2} alt="Condition Logo" className="input-icon" />
-            <input type="text" placeholder="City, state, or zipcode" />
+            <input
+              type="text"
+              className="search-input-location"
+              data-icon={i2}
+              placeholder="City, state, or zipcode"
+            />
           </div>
 
           {/* Third Input Field - Insurance Carrier */}
           <div className="search-box search-box-3">
-          <img src={i3} alt="Condition Logo" className="input-icon" />
-            <input type="text" placeholder="Insurance carrier" />
+            <input
+              type="text"
+              className="search-input-insurance"
+              data-icon={i3}
+              placeholder="Insurance carrier"
+            />
           </div>
 
           {/* Find Now Button */}
@@ -53,3 +65,14 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+<div className="how-it-works-card">
+  <img src="path-to-image" alt="card image" className="card-image" />
+  <div className="card-content">
+    <h3 className="card-title">Card Title</h3>
+    <p className="card-description">Description goes here</p>
+  </div>
+  <div className="card-metric-container">
+    <img src="path-to-icon" alt="icon" className="metric-icon" />
+    <span>120/80 mins</span>
+  </div>
+</div>

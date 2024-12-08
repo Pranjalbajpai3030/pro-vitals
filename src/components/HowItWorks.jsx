@@ -12,6 +12,33 @@ import iconVector2 from "../assets/images/Vector.svg";
 import iconVector3 from "../assets/images/Mask group.svg";
 import iconVector4 from "../assets/images/Vector5.svg";
 
+const metricData = [
+  {
+    icon: iconVector2,
+    text: "121/80 mmHg",
+  },
+  {
+    icon: iconVector3,
+    text: "32 minutes",
+  },
+  {
+    icon: iconVector1,
+    text: "8 hours",
+  },
+  {
+    icon: iconVector4,
+    text: "60 bpm",
+  },
+  {
+    icon: iconVector3,
+    text: "Feeling Better",
+  },
+  {
+    icon: iconVector,
+    text: "62 Days",
+  },
+];
+
 const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState("Nutrition");
   const sliderRef = useRef(null);
@@ -22,75 +49,44 @@ const HowItWorks = () => {
       image: nutritionImg,
       description:
         "Evidence supports the use of a whole-food, plant-predominant diet to prevent, treat, and reverse chronic illness.",
-      metric: (
-        <div className="card-metric-container">
-          <img src={iconVector2} alt="Icon" className="metric-icon" />
-          <span style={{ fontWeight: "bold" }}>121/80</span> mmHg
-        </div>
-      ),
+      metric: metricData[0],
     },
     {
       title: "Physical Activity",
       image: physicalImg,
       description:
         "Regular physical activity is key to managing weight, improving mental health, and reducing the risk of chronic disease.",
-      metric: (
-        <div className="card-metric-container">
-          <img src={iconVector3} alt="Icon" className="metric-icon" />
-          <span style={{ fontWeight: "bold" }}>32</span> minutes
-        </div>
-      ),
+      metric: metricData[1],
     },
     {
       title: "Restorative Sleep",
       image: restorativeImg,
       description:
         "Consistent, quality sleep enhances brain function and physical health.",
-      metric: (
-        <div className="card-metric-container">
-          <img src={iconVector1} alt="Icon" className="metric-icon" />
-          <span style={{ fontWeight: "bold" }}>8</span> hours
-        </div>
-      ),
+      metric: metricData[2],
     },
     {
       title: "Stress Management",
       image: stressImg,
       description:
         "Effective stress management techniques are crucial for mental well-being and overall health.",
-      metric: (
-        <div className="card-metric-container">
-          <img src={iconVector4} alt="Icon" className="metric-icon" />
-          <span style={{ fontWeight: "bold" }}>60</span> bpm
-        </div>
-      ),
+      metric: metricData[3],
     },
     {
       title: "Social Connection",
       image: socialImg,
       description:
         "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",
-      metric: (
-        <div className="card-metric-container">
-          <img src={iconVector3} alt="Icon" className="metric-icon" />
-          Feeling Better
-        </div>
-      ),
+      metric: metricData[4],
     },
     {
       title: "Substance Abuse",
       image: substanceImg,
       description:
         "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
-      metric: (
-        <div className="card-metric-container">
-          <img src={iconVector} alt="Icon" className="metric-icon" />
-          <span style={{ fontWeight: "bold" }}>62</span> Days
-        </div>
-      ),
+      metric: metricData[5],
     },
   ];
-  
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -99,11 +95,7 @@ const HowItWorks = () => {
   const handleScroll = (direction) => {
     const slider = sliderRef.current;
     if (slider) {
-      if (direction === "left") {
-        slider.scrollBy({ left: -300, behavior: "smooth" });
-      } else {
-        slider.scrollBy({ left: 300, behavior: "smooth" });
-      }
+      slider.scrollBy({ left: direction === "left" ? -300 : 300, behavior: "smooth" });
     }
   };
 
@@ -130,16 +122,10 @@ const HowItWorks = () => {
 
       {/* Arrows Section */}
       <div className="arrows-container">
-        <button
-          className="arrow left-arrow"
-          onClick={() => handleScroll("left")}
-        >
+        <button className="arrow left-arrow" onClick={() => handleScroll("left")}>
           ←
         </button>
-        <button
-          className="arrow right-arrow"
-          onClick={() => handleScroll("right")}
-        >
+        <button className="arrow right-arrow" onClick={() => handleScroll("right")}>
           →
         </button>
       </div>
@@ -151,7 +137,12 @@ const HowItWorks = () => {
             <div key={index} className="how-it-works-card card">
               <div className="image-container">
                 <img src={topic.image} alt={topic.title} className="card-image" />
-                {topic.metric && <div className="card-metric">{topic.metric}</div>}
+                {topic.metric && (
+                  <div className="card-metric-container">
+                    <img src={topic.metric.icon} alt="Icon" className="metric-icon" />
+                    <span style={{ fontWeight: "bold" }}>{topic.metric.text}</span>
+                  </div>
+                )}
               </div>
               <h3 className="card-title">{topic.title}</h3>
               <p className="card-description">{topic.description}</p>

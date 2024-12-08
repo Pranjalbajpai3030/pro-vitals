@@ -1,15 +1,16 @@
 /* General updates */
 .how-it-works-card {
-  min-width: 493px;
-  max-height: 485px;
-  background-color: #f9f9f9;
+  width: 493px;
+  height: 485px; /* Match the image height */
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 0; /* Remove all padding */
   text-align: center;
   flex-shrink: 0;
-  position: relative; /* For absolute positioning of the metrics */
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures no overflow */
 }
+
 .lifestyle-title {
   font-family: "Inter";
   font-size: 28px;
@@ -19,26 +20,23 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  
-
 }
+
 .how-it-works h2 {
   width: 135px;
-height: 21px;
-top: 802px;
-left: 80px;
-gap: 0px;
-opacity: 0px;
-font-family: "Inter";
-font-size: 16px;
-font-weight: 500;
-line-height: 21.28px;
-letter-spacing: 0.075em;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-
-
+  height: 21px;
+  top: 802px;
+  left: 80px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.28px;
+  letter-spacing: 0.075em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .gradient-text {
@@ -49,14 +47,14 @@ text-decoration-skip-ink: none;
 
 .six-pillars {
   font-family: Inter;
-font-size: 28px;
-font-weight: 400;
-line-height: 37.24px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 37.24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
+
 /* Image container with overflow settings */
 
 /* Card adjustments */
@@ -79,35 +77,55 @@ text-decoration-skip-ink: none;
   display: none;
 }
 
-.how-it-works-card {
-  min-width: 493px;
-  max-height: 485px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
 /* Adjust metrics to variable lengths */
 /* Metrics positioned at the left-bottom */
-.card-metric {
+.card-metric-container {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  max-width: 150px;
-  padding: 5px 15px;
+  height: 43px;
+  min-width: 50px; /* Minimum width */
+  max-width: 200px; /* To allow variable width */
+  padding: 0 10px;
   background: #ffffff;
-  border-radius: 21.5px;
-  display: flex; /* Flexbox for alignment */
-  align-items: center; /* Aligns items (icon and text) vertically */
-  justify-content: flex-start; /* Aligns content to the left */
+  border-radius: 67px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: flex-start; /* Align content to the left */
   font-size: 14px;
   font-weight: bold;
   color: #333;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Ensures content doesn't overflow */
+  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 2;
+  margin-bottom: 5px;
+}
+
+/* Different styling for each card */
+.card-1 {
+  background-color: #f0f8ff; /* Light blue */
+}
+
+.card-2 {
+  background-color: #faebd7; /* Light beige */
+}
+
+.card-3 {
+  background-color: #ffe4e1; /* Light pink */
+}
+
+.card-4 {
+  background-color: #f5fffa; /* Mint cream */
+}
+
+.card-5 {
+  background-color: #e6e6fa; /* Lavender */
+}
+
+.card-6 {
+  background-color: #fdf5e6; /* Old lace */
 }
 
 /* Icon styling */
@@ -118,42 +136,7 @@ text-decoration-skip-ink: none;
   object-fit: contain;
 }
 
-
 /* Arrow adjustments */
-.arrows-container {
-  width: 106px;
-height: 46px;
-top: 828px;
-left: 1320px;
-gap: 0px;
-border: 1px 0px 0px 0px;
-opacity: 0px;
-
-}
-
-.arrow {
-  font-size: 20px;
-  cursor: pointer;
-  color: #000000;
-  background: white;
-  border-radius: 50%;
-  border-color: #000000;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  width: 46px;
-height: 46px;
-top: 828px;
-left: 1320px;
-gap: 0px;
-opacity: 0px;
-
-}
-
 .arrows-container {
   position: absolute;
   top: 828px;
@@ -165,6 +148,44 @@ opacity: 0px;
   justify-content: space-between;
   opacity: 1; /* Changed to make arrows visible */
 }
+.card-content {
+  padding: 15px; /* Add some padding around the content */
+  text-align: center; /* Center the title and description */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Space between title and description */
+}
+
+/* Title styling */
+.card-title {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin: 0; /* Adjusts margin to remove any spacing */
+  padding-left: 10px; /* Adds 5px padding on the left */
+  padding-right: 10px; /* Adds 5px padding on the right */
+}
+
+.card-description {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  opacity: 1; /* Ensures description is visible */
+  margin: 0; /* Ensures no additional spacing */
+  padding-left: 10px; /* Adds 5px padding on the left */
+  padding-right: 10px; /* Adds 5px padding on the right */
+}
+
 
 .arrow {
   width: 46px;
@@ -177,28 +198,6 @@ opacity: 0px;
 
 .arrow:hover {
   transform: scale(1.1);
-}
-.card-metric {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  bottom: 16px; /* Aligns metrics to the bottom of the card */
-  left: 16px; /* Adjust horizontal position */
-}
-
-.card-metric-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.card-metric-text {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333; /* Adjust for better visibility */
-}
-
-.arrow:hover {
   background-color: #ff7e5f;
   color: white;
 }
@@ -229,7 +228,9 @@ opacity: 0px;
   color: white;
   border-color: #000000;
 }
+
 .image-container {
+  max-width: 493px;
   position: relative;
   border-radius: 8px;
   overflow: hidden; /* Ensures the image is clipped to fit within the container */
@@ -239,4 +240,22 @@ opacity: 0px;
   width: 100%;
   height: 320px; /* Fixed height for consistent sizing */
   object-fit: cover; /* Ensures the image is cropped proportionally */
+}
+
+/* Card title styling */
+.card-title {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Card description styling */
+.card-description {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #666;
 }

@@ -44,21 +44,30 @@
 }
 
 /* Styling for the Login/Signup dropdown */
+/* Style for Login/Signup */
 .dropdown-toggle {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 14px; /* Specify the desired font size */
   font-weight: 500;
-  color: #707070;
+  color: #707070; /* Set your desired text color */
   text-decoration: none;
+  background: none; /* Remove any default background */
+  border: none; /* Remove border */
   display: flex;
-  align-items: center; /* Ensure the text is centered vertically */
+  align-items: center; /* Center vertically */
+}
+
+/* On Hover */
+.dropdown-toggle:hover {
+  color: #0da9b3; /* Change color on hover */
+  text-decoration: none;
 }
 
 /* Dropdown Menu Styling */
 .dropdown-menu {
   width: 214px !important; /* Width of the dropdown */
-  height: 81px !important; /* Height of the dropdown */
-  top: 120px !important; /* Position below the navbar */
+  height: 90px !important; /* Height of the dropdown */
+ 
   left: 1003px; /* Adjusted left position */
   background-color: white;
   border-radius: 4px 0px 0px 0px;
@@ -66,6 +75,20 @@
   opacity: 0; /* Initially hidden */
   transition: opacity 0.3s ease; /* Smooth transition */
   visibility: hidden; /* Initially hidden */
+}
+
+/* Add your styles here */
+
+
+
+.dropdown-separator {
+
+  height: 1px;
+
+  background-color: #e5e5e5;
+
+  margin: 0.5rem 0;
+
 }
 
 /* When dropdown is visible, display it */
@@ -101,6 +124,8 @@
 
 /* Logo Styling */
 .navbar-logo {
+
+  
   width: 177.17px;
   height: 70.55px;
   position: absolute;

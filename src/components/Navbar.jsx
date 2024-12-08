@@ -1,13 +1,12 @@
 import React from "react";
-import { Dropdown } from 'react-bootstrap';
+import { Dropdown } from "react-bootstrap";
 import "./Navbar.css";
-import logo from '../assets/logo.png';
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        {/* Replace text with logo image */}
         <img src={logo} alt="Logo" className="navbar-logo" />
       </div>
       <div className="navbar-options">
@@ -29,18 +28,27 @@ const Navbar = () => {
         <div className="navbar-option">
           <a href="#">Doctors</a>
         </div>
-        
-        {/* Dropdown for Login/Signup */}
-        <div className="navbar-option">
+
+        {/* Updated Button for Login/Signup */}
+        <div className="navbar-option" style={{ display: "flex", alignItems: "center" }}>
           <Dropdown>
-            <Dropdown.Toggle variant="link" id="dropdown-basic" className="dropdown-toggle">
+            <Dropdown.Toggle
+              variant="link"
+              id="dropdown-basic"
+              className="dropdown-toggle"
+              style={{ color: "#838383" }}
+            >
               Login/Signup
             </Dropdown.Toggle>
 
             <Dropdown.Menu className="dropdown-menu">
-              <Dropdown.Item href="#/action-1" className="dropdown-item">Doctors</Dropdown.Item>
-              <div className="separator"></div>
-              <Dropdown.Item href="#/action-2" className="dropdown-item">Patients</Dropdown.Item>
+              <Dropdown.Item href="#/doctor-login" className="dropdown-item">
+                Doctor Login/Signup
+              </Dropdown.Item>
+              <div className="dropdown-separator"></div>
+              <Dropdown.Item href="#/patient-login" className="dropdown-item">
+                Patient Login/Signup
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
