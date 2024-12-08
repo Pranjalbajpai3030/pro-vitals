@@ -1,3 +1,4 @@
+/* Hero Section */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -6,84 +7,54 @@
   height: 100vh;
   position: relative;
   background: linear-gradient(to bottom, #f5f5f5, #fff);
-  padding-top: 60px;
   overflow: hidden;
 }
 
+/* Hero Content */
 .hero-content {
-  position: left ;
+  position: relative;
   z-index: 2;
   max-width: 1100px;
   margin: 0 auto;
   text-align: left;
   padding-top: 80px;
 }
+.input-icon {
+  width: 24px; /* Adjust the width of the logo */
+  height: 24px; /* Adjust the height of the logo */
+  margin-right: 10px; /* Add space between the logo and input text */
+}
 
 .book-appointment-text {
-  position: absolute;
-  width: 599px;
-  height: 104px;
-  top: 214px;
-  left: 650px;
+  margin-top: 150px;
+  margin-left: 650px;
+  min-width: 599px;
   font-family: 'Dash to School', sans-serif;
-  font-weight: 500;
   font-size: 40px;
-  line-height: 48.41px; /* Matches the line-height of 48.41px */
-  letter-spacing: -0.02em; /* Converts -2% letter spacing to CSS */
-  color: #000; /* Adjust the color as needed */
-  text-align: left; /* Aligns the text to the left */
+  font-weight: 500;
+  line-height: 48px;
+  color: #000;
 }
 
 .optimize-text {
-  position: absolute;
-  width: 630px;
-  height: 32px;
-  top: 342px;
-  left: 650px;
+  margin-left : 650px;
+  margin-top: 20px;
   font-family: 'Dash to School', sans-serif;
-  font-weight: 400; /* Normal font weight */
   font-size: 18px;
-  line-height: 32px; /* Matches the given line height */
-  color: #000; /* Replace #000 with the actual color hex if needed */
-  letter-spacing: 0; /* Default spacing */
-  text-align: left; /* Aligns text to the left */
+  line-height: 32px;
+  color: #000;
 }
-.span-whitespace {
+.lifestyle-medicine-text{
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  
+  
   font-family: 'Dash to School', sans-serif;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 48.41px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-.lifestyle-medicine-text {
-  font-family:'Dash to School', sans-serif;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 52.61px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #0daeb3;
-}
-.span-experts {
-  font-family: 'Dash to School', sans-serif;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 52.61px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+
+  color: #0da9b3;
 }
 .search-bar-container {
-  position: absolute;
-  top: 464px; /* Shifted 464px from the top */
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,43 +64,104 @@
   border-radius: 8px;
   padding: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 90%;
+  
   max-width: 1080px;
+  margin-top: 110px;
+  margin-left:120 px ;
 }
 
-
 .search-box {
-  height: 60px;
   flex: 1;
   background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 10px 16px;
+  align-items: center; /* Vertically center content */
+  align-items: center; /* Vertically center content */
+  justify-content: flex-start; /* Align content to the left (side by side) */
 }
 
-.search-box input {
-  height: 100;
+.search-box-1 {
+  width: 377px;
+  height: 60px;
+  top: 480px;
+  left: 136px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  
+}
+
+.search-box-1 input {
   width: 100%;
+  height: 100%;
   border: none;
   outline: none;
   font-size: 16px;
   color: #333;
+  padding-left: 10px;
 }
 
-.find-now-button {
-  width: 157px;
+/* Second Input Field - City, State, Zipcode */
+.search-box-2 {
+  width: 252px;
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
+  top: 480px;
+  left: 523px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  align-items: center; /* Vertically center content */
+  justify-content: flex-start; /* Align content to the left (side by side) */
+  
+}
+
+.search-box-2 input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  padding-left: 10px;
+}
+
+/* Third Input Field - Insurance Carrier */
+.search-box-3 {
+  width: 230px;
+  height: 60px;
+  top: 480px;
+  left: 785px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  align-items: center; /* Vertically center content */
+  justify-content: flex-start; /* Align content to the left (side by side) */
+  
+}
+
+.search-box-3 input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  padding-left: 10px;
+}
+
+
+.find-now-button {
   background: linear-gradient(to right, #67b1b4, #4683d0);
   color: #fff;
   border: none;
   border-radius: 5px;
+  padding: 10px 20px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 157px;
+  height: 60px;
 }
 
 .find-now-button:hover {
@@ -137,53 +169,60 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Image Carousel */
 .image-carousel {
+  width: 247px;
+  height: 354px;
+  min-width: 247px;
+  min-height: 354px;
   position: absolute;
-  top: 80px; /* Below navbar */
-  left: 0;
+  top: 80px;
   width: 100%;
-  height: calc(100% - 80px); /* Full height minus navbar */
+  height: calc(100% - 80px);
   display: flex;
   overflow: hidden;
-  z-index: 1; /* Behind content */
+  object-fit: cover;
+  z-index: 1;
 }
 
 .image-strip {
-  position: absolute;
-  width: 247px;
-  height: 100%;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .image-strip-up {
-  left: 80px;
-  animation: rollUp 10s linear infinite;
+  margin-left: 80px;
+  animation: rollCircular 10s linear infinite;
 }
 
 .image-strip-down {
-  left: 347px;
-  animation: rollDown 10s linear infinite;
+  margin-left: 20px;
+  animation: rollCircularReverse 10s linear infinite;
 }
 
 .collage-image {
   width: 247px;
   height: 354px;
+  min-width: 247px;
+  min-height: 354px;
   object-fit: cover;
-  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
-@keyframes rollUp {
+/* Keyframes for Circular Animation */
+@keyframes rollCircular {
   0% {
-    transform: translateY(100%);
+    transform: translateY(0%);
   }
   100% {
     transform: translateY(-100%);
   }
 }
 
-@keyframes rollDown {
+@keyframes rollCircularReverse {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(0%);
   }
   100% {
     transform: translateY(100%);
