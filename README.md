@@ -1,11 +1,11 @@
-# **🏥 Appointment Booking Website**  
+# **🏥 Pro Vitals Website**  
 
 This project is a modern and responsive appointment booking platform designed with React.js, emphasizing user-friendly navigation, elegant UI design, and accessibility across different screen sizes.  
 
 ---
 
-## **🖥️ Live Demo Video**  
-👉 **[[Video Demonstration Link](https://vercel.com/pranjal-bajpais-projects-bf0b0588/pro-vitals)](#)**   
+## **🖥️ Deployed Site Link**  
+👉 **[[Site Link](https://vercel.com/pranjal-bajpais-projects-bf0b0588/pro-vitals)](#)**   
 
 ---
 
