@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
+  // State to manage the mobile menu
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Toggle function for the hamburger menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prevState) => !prevState);
+  };
+
   return (
     <nav className="navbar">
+      {/* Logo Section */}
       <div className="logo">
         <img src={logo} alt="Logo" className="navbar-logo" />
       </div>
-      <div className="navbar-options">
+
+      {/* Desktop Navbar Options */}
+      <div className="navbar-options desktop">
         <div className="navbar-option">
           <a href="#">List Your Practices</a>
         </div>
@@ -29,7 +40,7 @@ const Navbar = () => {
           <a href="#">Doctors</a>
         </div>
 
-        {/* Updated Button for Login/Signup */}
+        {/* Login/Signup Dropdown */}
         <div className="navbar-option" style={{ display: "flex", alignItems: "center" }}>
           <Dropdown>
             <Dropdown.Toggle
@@ -51,6 +62,39 @@ const Navbar = () => {
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+        </div>
+      </div>
+
+      {/* Hamburger Menu Icon */}
+      <button
+        className="hamburger-menu-icon"
+        onClick={toggleMobileMenu}
+        aria-label="Toggle mobile menu"
+      >
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </button>
+
+      {/* Mobile Navbar Options */}
+      <div className={`navbar-options mobile ${isMobileMenuOpen ? "show" : ""}`}>
+        <div className="login-signup-section">
+          <div className="login-item">
+            <strong>Doctor</strong>
+            <a href="#doctor-login">Login</a> | <a href="#doctor-signup">Sign up</a>
+          </div>
+          <div className="login-item">
+            <strong>Patients</strong>
+            <a href="#patient-login">Login</a> | <a href="#patient-signup">Sign up</a>
+          </div>
+        </div>
+        <div className="menu-items">
+          <div className="menu-item">Doctors ➔</div>
+          <div className="menu-item">List your practice ➔</div>
+          <div className="menu-item">For Employers ➔</div>
+          <div className="menu-item">Courses ➔</div>
+          <div className="menu-item">Books ➔</div>
+          <div className="menu-item">Speakers ➔</div>
         </div>
       </div>
     </nav>
