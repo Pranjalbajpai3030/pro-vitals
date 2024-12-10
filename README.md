@@ -31,13 +31,14 @@ This project is a modern and responsive appointment booking platform designed wi
 
 ---
 
-## **📱 Mobile View (Screenshots)**  
+## **📱 Mobile View (Screenshots)**
 
-| Feature              | Screenshot                |
-|---------------------|----------------------------|
-| Search Form         | ![Mobile Search Form](#)  |
-| Animated Images     | ![Mobile Animated Images](#) |
-| Health Cards        | ![Mobile Health Cards](#) |  
+| Feature          | Screenshot                                                                                                                                 |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Search Form       | ![Mobile Search Form](https://github.com/user-attachments/assets/e6db46ce-b01c-4a07-ab18-ad094f78a018)                                    |
+| Menu              | ![Mobile Animated Images](https://github.com/user-attachments/assets/61140ffc-7a9a-4f76-bc15-29119b20769a)                               |
+| Health Cards      | ![Mobile Health Cards](https://github.com/user-attachments/assets/7b05f76c-e059-4b5e-8114-7c012cbcefc4)                                   |
+| Detailed View     | ![Detailed View](https://github.com/user-attachments/assets/420abe75-c48d-4967-9957-8098de182c48)                                         |
 
 ---
 
