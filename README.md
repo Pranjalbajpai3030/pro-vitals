@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# **🏥 Pro Vitals Website**  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a modern and responsive appointment booking platform designed with React.js, emphasizing user-friendly navigation, elegant UI design, and accessibility across different screen sizes.  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **🖥️ Deployed Site Link**  
+👉 **[WEBSITE LINK](https://pro-vitals.vercel.app/)**  
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **📌 Features**  
 
-### `npm test`
+### **1. Intuitive UI/UX**  
+- Clean, modern design with responsive layouts for both desktop and mobile.  
+- Animated scrolling image section for an engaging user experience.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **2. Search Functionality**  
+- **Search Form:** Includes input fields for searching by insurance carrier, city, and health conditions.  
+- **Submit Button:** Submits search queries with a visually appealing gradient style.  
 
-### `npm run build`
+### **3. Component Highlights**  
+- **Header:** Fixed navigation bar for easy site access.  
+- **Search Page:** A hero section with a search form and dynamic scrolling images.  
+- **Health Card Section:** Displays detailed health-related cards for better service insights.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **4. Responsive Design**  
+- Adjusts layout, spacing, and animation depending on the device's screen size.  
+- Optimized for performance and cross-browser compatibility.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **📱 Mobile View (Screenshots)**  
 
-### `npm run eject`
+| Feature              | Screenshot                |
+|---------------------|----------------------------|
+| Search Form         | ![Mobile Search Form](#)  |
+| Animated Images     | ![Mobile Animated Images](#) |
+| Health Cards        | ![Mobile Health Cards](#) |  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **💻 Laptop/Desktop View (Screenshots)**  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| **Feature**           | **Screenshot**                                                                                          |
+|----------------------|----------------------------------------------------------------------------------------------------------|
+| **How It Works**     | ![cards](https://github.com/user-attachments/assets/bd04db6d-a5b5-4dc6-9cc2-67ec7968becb)               |
+| **Search Page**      | ![search bar](https://github.com/user-attachments/assets/3de8d2b7-f16e-4763-aec7-3956f0dc3130)          |
+| **Detailed View**    | ![Detailed View](https://github.com/user-attachments/assets/420abe75-c48d-4967-9957-8098de182c48)      |  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **🛠️ Technologies Used**  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Frontend Framework:** React.js  
+- **Styling:** CSS3, Flexbox, Media Queries  
+- **Icons & Images:** Local assets and custom icons  
+- **Fonts:** Google Fonts (Inter, Lora)  
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## **🚀 How to Run the Project**  
 
-### Analyzing the Bundle Size
+1. **Clone the Repository:**  
+   ```bash
+   git clone https://github.com/yourusername/appointment-booking.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Email: Pranjalajpai30@gmail.com
+LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/pranjal-bajpai30/)
