@@ -1,256 +1,154 @@
-/* General Styling */
-body {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+body{
   font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-/* Navbar Styling */
-.navbar {
+
+.mainContainer {
+  z-index: 10;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-logo img {
-  height: 40px;
-}
-
-.navbar-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-/* Hero Section Styling */
-.hero-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px;
-  background: linear-gradient(to bottom, #f9f9f9, #fff);
-}
-
-.hero-left {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.hero-left img {
   width: 100%;
-  border-radius: 10px;
+  padding: 0px 0px !important;
+  flex-direction: column;
+  margin: 0px;
 }
 
-.hero-right {
-  flex: 1;
-  padding-left: 40px;
-}
-
-.hero-right h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.hero-right p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.hero-right input, .hero-right button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.hero-right button {
-  background-color: #5cb85c;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* Gradient Divider */
-.gradient-divider {
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #f0c971 10%, #e5688c 90%);
-  margin: 20px 0;
-}
-
-/* How It Works Section */
-.how-it-works {
-  text-align: center;
-  padding: 40px;
-  background-color: #ffffff;
-}
-
-.how-it-works h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.how-it-works p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.how-it-works-tabs {
+.contentSection {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.how-it-works-tabs button {
-  padding: 10px 20px;
-  margin: 0 5px;
-  border: none;
-  background-color: #fff;
-  color: #333;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.how-it-works-tabs button.active {
-  background-color: #e5688c;
-  color: #fff;
-}
-
-.how-it-works-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
 }
 
-.how-it-works-card {
-  width: 250px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.how-it-works-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.how-it-works-card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.how-it-works-card p {
-  color: #555;
-}
-
-/* Responsiveness */
-@media screen and (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-  }
-
-  .hero-right {
-    padding: 0;
-  }
-
-  .how-it-works-tabs {
-    flex-wrap: wrap;
-  }
-}
-/* Search Bar Styling */
-.search-bar-outer {
-  position: relative;
-  width: 1080px;
-  height: 92px;
-  margin: 0 auto; /* Center-align */
-  opacity: 1;
-}
-
-.search-bar-inner {
-  position: relative;
-  width: 100%; /* Takes up full width of the outer container */
-  height: 60px;
+.imageColumn {
   display: flex;
-  align-items: center;
-  background-color: #e7e7e7;
-  border: 1px solid #ccc; /* Optional */
-  border-radius: 5px;
+  flex-direction: column;
+  line-height: normal;
+  width: 18%;
 }
 
-.procedure-box {
-  width: 377px;
-  height: 60px;
-  border-radius: 5px 0 0 5px; /* Rounded corners */
-  border: 1px solid #ccc;
-  padding: 0 10px;
-  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+.dividertest {
+  position: relative; 
+  z-index: 35;
+  top: 0px;
+  left: 0;
+  width: 97%;
+  height: 210px;
+  background-color: #fff; 
+  transform: rotate(-3deg); 
+  transform-origin: left;
 }
 
-.city-state-box {
-  width: 252px;
-  height: 60px;
-  border: 1px solid #ccc;
-  padding: 0 10px;
-  box-sizing: border-box;
+.dividertest::before {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: 0;
+  width: 120%;
+  overflow: hidden;
+  height: 50px; 
+  background: linear-gradient(90deg, #F0C971, #E5688C);  
+  z-index: -1;
 }
 
-.last-box {
-  width: 230px;
-  height: 60px;
-  border: 1px solid #ccc;
-  padding: 0 10px;
-  box-sizing: border-box;
+
+
+
+.topImage,
+.bottomImage {
+  aspect-ratio: 0.7;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 16px;
 }
 
-.find-button {
-  width: 157px;
-  height: 60px;
-  margin-left: 10px; /* Space between input fields and button */
-  background-color: #5cb85c;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+.bottomImage {
+  margin-top: 19px;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .search-bar-outer {
-    width: 100%;
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 82%;
+  margin-left: 20px;
+}
+
+.infoWrapper {
+  display: flex;
+  margin-top: 67px;
+  width: 100%;
+  padding-bottom: 24px;
+  flex-direction: column;
+}
+
+.mainTitle {
+  color: #000;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  font-family: Inter, sans-serif;
+}
+
+.lightText {
+  font-weight: 500;
+}
+
+.boldText {
+  font-weight: 600;
+  line-height: 53px;
+}
+
+.description {
+  color: #707070;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 24px 32px 0 0;
+  font-family: Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .mainContainer {
+    max-width: 100%;
     padding: 0 20px;
   }
 
-  .search-bar-inner {
+  .contentSection {
     flex-direction: column;
+    align-items: stretch;
+    gap: 0;
   }
 
-  .procedure-box,
-  .city-state-box,
-  .last-box,
-  .find-button {
-    width: 100%; /* Make inputs and button take full width */
-    margin-bottom: 10px; /* Space between elements */
+  .imageColumn,
+  .infoColumn {
+    width: 100%;
   }
 
-  .find-button {
-    margin-left: 0; /* No space for button in column layout */
+  .infoWrapper {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .mainTitle,
+  .description {
+    max-width: 100%;
+  }
+
+  .description {
+    margin-right: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .dividertest{
+    display: none;
   }
 }

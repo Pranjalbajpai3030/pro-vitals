@@ -1,19 +1,23 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import GradientDivider from "./GradientDivider.jsx";
-import HowItWorks from "./components/HowItWorks";
 import './App.css';
+import Header from './components/Header';
+import SearchPage from "./components/SearchPage";
+import HealthCard from "./components/HealthCards";
 
-const App = () => {
-  return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      <GradientDivider /> {/* Gradient divider added here */}
-      <HowItWorks />
-    </div>
+function AppointmentBooking() {
+  return (<>
+    <Header />
+    <main className="mainContainer">
+
+      <section className="contentSection">
+      </section>
+      
+      <SearchPage/>
+      <div className="dividertest"></div>
+      <HealthCard/>
+    </main>
+  </>
   );
-};
+}
 
-export default App;
+export default AppointmentBooking;
