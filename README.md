@@ -5,7 +5,8 @@ This project is a modern and responsive appointment booking platform designed wi
 ---
 
 ## **🖥️ Deployed Site Link**  
-👉 **[[Site Link]([https://vercel.com/pranjal-bajpais-projects-bf0b0588/pro-vitals](https://pro-vitals.vercel.app/))]** (#) 
+👉 **[WEBSITE LINK](https://pro-vitals.vercel.app/)**  
+
 
 ---
 
