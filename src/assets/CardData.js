@@ -6,7 +6,6 @@ import {
   social_connection,
   substance_abuse,
 } from "./imports";
-
 import {
   nutritionmetricicon,
   physical_activitymetricicon,
@@ -21,11 +20,9 @@ const cardData = [
     title: "Nutrition",
     description:
       "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat and reverse chronic illness.",
-    metric: {
-      value: "121/80",
-      unit: "mmHg",
-      icon: nutritionmetricicon,
-    },
+    metric: "121/80",
+    submetric: "mmHg",
+    metricicon: nutritionmetricicon,
     image: nutrition,
   },
   {
@@ -33,11 +30,9 @@ const cardData = [
     title: "Physical activity",
     description:
       "Regular physical activity is key to managing weight, improving mental health, and reducing risk of chronic disease.",
-    metric: {
-      value: "32",
-      unit: "minutes",
-      icon: physical_activitymetricicon,
-    },
+    metric: "32",
+    submetric: "minutes",
+    metricicon: physical_activitymetricicon,
     image: physical_activity,
   },
   {
@@ -45,11 +40,9 @@ const cardData = [
     title: "Restorative sleep",
     description:
       "Consistent, quality sleep is essential for cognitive function and physical health.",
-    metric: {
-      value: "8",
-      unit: "hours",
-      icon: restorative_sleepmetricicon,
-    },
+    metric: "8",
+    submetric: "hours",
+    metricicon: restorative_sleepmetricicon,
     image: restorative_sleep,
   },
   {
@@ -57,11 +50,9 @@ const cardData = [
     title: "Stress management",
     description:
       "Effective stress management techniques are crucial for mental well-being and overall health.",
-    metric: {
-      value: "60",
-      unit: "minutes",
-      icon: stress_managementmetricicon,
-    },
+    metric: "60",
+    submetric: "minutes",
+    metricicon: stress_managementmetricicon,
     image: stress_management,
   },
   {
@@ -69,11 +60,9 @@ const cardData = [
     title: "Social connection",
     description:
       "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",
-    metric: {
-      value: "Feeling",
-      unit: "better",
-      icon: physical_activitymetricicon,
-    },
+    metric: "Feeling",
+    submetric: "better",
+    metricicon: physical_activitymetricicon,
     image: social_connection,
   },
   {
@@ -81,11 +70,9 @@ const cardData = [
     title: "Substance abuse",
     description:
       "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
-    metric: {
-      value: "62",
-      unit: "days",
-      icon: substance_abusemetricicon,
-    },
+    metric: "62",
+    submetric: "days",
+    metricicon: substance_abusemetricicon,
     image: substance_abuse,
   },
 ];
